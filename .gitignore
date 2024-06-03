@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+config.ini
+draft.py
+db.sqlite3

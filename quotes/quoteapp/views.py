@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from .forms import TagForm, QuoteForm, AuthorForm
 from .models import Tag, Author, Quote
-from .connect import db
+# uncomment when need to get data directly from the MongoDB
+# from .connect import db 
 
 
 from django.shortcuts import render, redirect, get_object_or_404

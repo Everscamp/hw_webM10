@@ -4,15 +4,15 @@
 
 <form method="POST" action="{% url 'quoteapp:tag' %}">
     {% csrf_token %}
-    <div style="padding: 10px">
-        <label>Enter the tag name:
+    <div style="padding-top: 10px">
+        <label class="quote"><b>Enter the tag name:</b>
             {{form.name}}
         </label>
         <span>{{ form.errors.name }}</span>
     </div>
-    <div class="grid">
-        <button type="submit">Submit</button>
-        <button type="reset" class="secondary">Reset</button>
+    <div style="padding-left: 200px;">
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
     </div>
 </form>
 

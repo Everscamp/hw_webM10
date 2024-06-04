@@ -4,9 +4,9 @@
 
 <form method="POST" action="{% url 'quoteapp:quote' %}">
     {% csrf_token %}
-    <div style="padding: 10px">
-        <label> Select author:
-            <select name="author" required>
+    <div style="padding-top: 10px">
+        <label class="quote"> <b>Select author:</b>
+            <select name="author" required class="form-select-md">
                 {% for author in authors %}
                 <option value="{{author.fullname}}">{{author.fullname}}</option>
                 {% endfor %}
@@ -14,24 +14,24 @@
         </label>
         <span>{{ form.errors.author }}</span>
     </div>
-    <div style="padding: 10px">
-        <label> Quote description:
+    <div>
+        <label class="quote"> <b>Quote description:</b>
             {{ form.quote }}
         </label>
         <span>{{ form.errors.quote }}</span>
     </div>
-    <div style="padding: 10px">
-        <label> Select tags:
-            <select name="tags" multiple="multiple" required>
+    <div>
+        <label class="quote"> <b>Select tags:</b>
+            <select name="tags" multiple="multiple" class="form-select" required>
                 {% for tag in tags %}
                 <option value="{{tag.name}}">{{tag.name}}</option>
                 {% endfor %}
             </select>
         </label>
     </div>
-    <div class="grid">
-        <button type="submit">Submit</button>
-        <button type="reset" class="secondary">Reset</button>
+    <div style="padding-left: 200px;">
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
     </div>
 </form>
 {% endblock %}

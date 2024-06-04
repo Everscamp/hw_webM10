@@ -3,6 +3,7 @@ from pymongo.server_api import ServerApi
 
 import configparser
 
+
 config = configparser.ConfigParser()
 config.read('config.ini') #I put my original config file not in this folder, so the path to the file was different
 

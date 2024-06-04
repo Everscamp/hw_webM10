@@ -4,33 +4,33 @@
 
 <form method="POST" action="{% url 'quoteapp:author' %}">
     {% csrf_token %}
-    <div style="padding: 10px">
-        <label> Author name:
+    <div style="padding-top: 10px">
+        <label class="quote"> Author name:
             {{ form.fullname }}
         </label>
         <span>{{ form.errors.fullname }}</span>
     </div>
-    <div style="padding: 10px">
-        <label> Born date:
+    <div>
+        <label class="quote"> Born date:
             {{ form.born_date }}
         </label>
         <span>{{ form.errors.born_date }}</span>
     </div>
-    <div style="padding: 10px">
-        <label> Born location:
+    <div>
+        <label class="quote"> Born location:
             {{ form.born_location }}
         </label>
         <span>{{ form.errors.born_location }}</span>
     </div>
-    <div style="padding: 10px">
-        <label> Author description:
+    <div>
+        <label class="quote"> Author description:
             {{ form.description }}
         </label>
         <span>{{ form.errors.description }}</span>
     </div>
-    <div class="grid">
-        <button type="submit">Submit</button>
-        <button type="reset" class="secondary">Reset</button>
+    <div style="padding-left: 200px;">
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
     </div>
 </form>
 {% endblock %}

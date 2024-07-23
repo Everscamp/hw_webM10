@@ -1,11 +1,12 @@
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+from pathlib import Path
 
 import configparser
-
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 config = configparser.ConfigParser()
-config.read('config.ini') #I put my original config file not in this folder, so the path to the file was different
+config.read(BASE_DIR / 'config.ini') 
 
 mongo_user = config.get('DB', 'user')
 mongodb_pass = config.get('DB', 'pass')
